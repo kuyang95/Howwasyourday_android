@@ -5,10 +5,7 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
 import com.pang.howwasyourday.databinding.ActivityHelloQuistionBinding
-import com.pang.howwasyourday.databinding.ActivityMainBinding
 
 class HelloQuistion : AppCompatActivity() {
 

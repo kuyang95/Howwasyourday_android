@@ -1,5 +1,6 @@
 package com.pang.howwasyourday
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -20,7 +21,6 @@ class HelloQuistion : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-
         binding.et1.addTextChangedListener(object: TextWatcher{
             override fun afterTextChanged(p0: Editable?) {
                 if(binding.et1.text.toString().equals("")){
@@ -28,7 +28,7 @@ class HelloQuistion : AppCompatActivity() {
                 }
                 else{
                     binding.enterButton.visibility = View.VISIBLE
-                    }
+                }
 
 
             }
@@ -42,9 +42,11 @@ class HelloQuistion : AppCompatActivity() {
             }
         })
 
-
-
-
-        
+        binding.enterButton.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
+
+
 }

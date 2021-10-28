@@ -1,6 +1,7 @@
 package com.pang.howwasyourday
 
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -16,6 +17,12 @@ class HelloQuistion : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_hello_quistion)
 
+        window?.decorView?.systemUiVisibility =
+            View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+        window.statusBarColor = Color.TRANSPARENT
+
+        supportActionBar?.hide()
+        
         // view Vinding 사용해서 view 접근
         binding = ActivityHelloQuistionBinding.inflate(layoutInflater)
         val view = binding.root

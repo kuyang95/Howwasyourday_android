@@ -22,7 +22,7 @@ class HelloQuistion : AppCompatActivity() {
         window.statusBarColor = Color.TRANSPARENT
 
         supportActionBar?.hide()
-        
+
         // view Vinding 사용해서 view 접근
         binding = ActivityHelloQuistionBinding.inflate(layoutInflater)
         val view = binding.root

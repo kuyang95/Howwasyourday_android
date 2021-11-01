@@ -2,5 +2,7 @@ package com.pang.howwasyourday
 
 import android.graphics.drawable.Drawable
 
-data class ListViewItem(val image: Drawable, val day : String, val title : String, val answer : String) {
-}
+data class BorderListViewItem(val day : String) {}
+
+// val image: Drawable,
+data class ObjectListViewItem( val title : String, val answer : String) {}
